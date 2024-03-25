@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+    <modelVersion>4.0.0</modelVersion>
+
+    <groupId>me.dio</groupId>
+    <artifactId>mokito-exemplos</artifactId>
+    <version>1.0-SNAPSHOT</version>
+
+    <description>Exemplos de utilização de Mockito de projetos Java</description>
+
+    <url>https://github.com/claudioneves1981/mockito-exemplos</url>
+
+    <licenses>
+        <license>
+            <name>MIT</name>
+            <url>https://spdx.org/licenses/MIT.html</url>
+            <distribution>repo</distribution>
+        </license>
+    </licenses>
+
+    <organization>
+        <name>Digital Innovation One</name>
+        <url>https://www.dio.me</url>
+    </organization>
+
+    <scm>
+        <url>https://github.com/claudioneves1981/mockito-exemplos</url>
+        <connection>git@github.com:claudioneves1981/mockito-exemplos.git</connection>
+        <developerConnection>git@github.com:claudioneves1981/mockito-exemplos.git</developerConnection>
+    </scm>
+
+
+    <issueManagement>
+        <system>Issues</system>
+        <url>https://github.com/claudioneves1981/mockito-exemplos/issues</url>
+    </issueManagement>
+
+
+    <ciManagement>
+        <system>Pipelines</system>
+        <url>https://github.com/claudioneves1981/mockito-exemplos/pipelines</url>
+    </ciManagement>
+
+
+    <properties>
+        <java.version>17</java.version>
+        <junit.jupiter.version>5.10.2</junit.jupiter.version>
+        <maven.compiler.source>17</maven.compiler.source>
+        <maven.compiler.target>17</maven.compiler.target>
+        <maven.compiler.plugin.version>3.11.0</maven.compiler.plugin.version>
+        <maven.jar.plugin.version>3.1.1</maven.jar.plugin.version>
+        <maven.surefire.plugin.version>2.22.1</maven.surefire.plugin.version>
+    </properties>
+
+    <dependencies>
+        <dependency>
+            <groupId>org.junit.jupiter</groupId>
+            <artifactId>junit-jupiter-engine</artifactId>
+            <version>${junit.jupiter.version}</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-junit-jupiter</artifactId>
+            <version>4.8.1</version>
+            <scope>test</scope>
+        </dependency>
+        <dependency>
+            <groupId>org.mockito</groupId>
+            <artifactId>mockito-inline</artifactId>
+            <version>4.8.1</version>
+            <scope>test</scope>
+        </dependency>
+    </dependencies>
+
+    <build>
+        <plugins>
+            <plugin>
+                <groupId>org.apache.maven.plugins</groupId>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>${maven.compiler.plugin.version}</version>
+                <configuration>
+                    <source>${java.version}</source>
+                    <target>${java.version}</target>
+                    <showWarnings>true</showWarnings>
+                    <showDeprecation>true</showDeprecation>
+                </configuration>
+            </plugin>
+        </plugins>
+    </build>
+
+</project>
